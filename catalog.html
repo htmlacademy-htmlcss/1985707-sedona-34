@@ -116,33 +116,42 @@
             </fieldset>
 
             <fieldset class="catalog-filter-group-3">
-              <label class="sort-price">
+              <span class="sort-price">
                 Стоимость, ₽:
-                <input class="sort-price-input" type="text" value="0">
-                <input class="sort-price-input" type="text" value="9000">
-              </label>
+              </span>
+              <div class="sort-price-container">
+                <input class="sort-price-input-min" type="text" placeholder="от" value="0">
+                <input class="sort-price-input-max" type="text" placeholder="до" value="9000">
+              </div>
               <div class="slider"></div>
             </fieldset>
-            <button class="button" type="submit">Применить</button>
-            <button class="button button-reset" type="submit">Сбросить</button>
+            <div class="sort-button-container">
+              <button class="button sort-button" type="submit">Применить</button>
+              <button class="button button-reset" type="submit">Сбросить</button>
+            </div>
           </form>
       </div>
       <div class="hotel-search-result">
-        <h2 class="sort-title">Найдено гостиниц: 38</h2>
-        <select class="select-control" aria-label="Сортировка">
-          <option value="popular">Сначала дешёвые</option>
-          <option value="cheap">Сначала дорогие</option>
-          <option value="expensive">Сначала популярные</option>
-        </select>
-        <a class="button-sort button-sort-cards" href="#">
-          <span class="visually-hidden">Показать карточки</span>
-        </a>
-        <a class="button-sort button-sort-slide-show" href="#">
-          <span class="visually-hidden">Показать слайдшоу</span>
-        </a>
-        <a class="button-sort button-sort-list" href="#">
-          <span class="visually-hidden">Показать список</span>
-        </a>
+        <div class="hotel-search-result-container">
+          <h2 class="sort-title">Найдено гостиниц: 38</h2>
+          <select class="select-control" aria-label="Сортировка">
+            <option value="popular">Сначала дешёвые</option>
+            <option value="cheap">Сначала дорогие</option>
+            <option value="expensive">Сначала популярные</option>
+          </select>
+          <a class="button-sort" href="#">
+            <div class="button-sort-cards"></div>
+            <span class="visually-hidden">Показать карточки</span>
+          </a>
+          <a class="button-sort" href="#">
+            <div class="button-sort-slide-show"></div>
+            <span class="visually-hidden">Показать слайдшоу</span>
+          </a>
+          <a class="button-sort" href="#">
+            <div class="button-sort-list"></div>
+            <span class="visually-hidden">Показать список</span>
+          </a>
+        </div>
         <ul class="hotel-list">
           <li class="hotel-card">
             <a class="hotel-card-link" href="#">
