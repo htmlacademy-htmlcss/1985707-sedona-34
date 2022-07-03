@@ -23,7 +23,7 @@
             <a class="navigation-link" href="#">О Седоне</a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link" href="catalog.html">Гостиницы</a>
+            <a class="navigation-link navigation-link-current" href="catalog.html">Гостиницы</a>
           </li>
         </ul>
         <div class="navigation-list navigation-user">
@@ -53,14 +53,17 @@
             <li class="breadcrumbs-item">
               <p class="visually-hidden">Главная</p>
               <a class="breadcrumbs-link" href="index.html">
-                <div class="breadcrumbs-house"></div>
+                <svg class="breadcrumbs-house" width="13" height="13" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="m.16 6.15 6-5.5 6 5.5v6.2h-12v-6.2Zm1 .4v4.8h10v-4.8l-5-4.5-5 4.5Zm4 3.8h-1v-3.5h4v3.5h-1v-2.5h-2v2.5Z" />
+                </svg>
               </a>
             </li>
             <li class="breadcrumbs-item">
               <div class="breadcrumbs-arrow"></div>
             </li>
             <li class="breadcrumbs-item">
-              <a class="breadcrumbs-link">Гостиницы</a>
+              <a class="breadcrumbs-link breadcrumbs-link-hotels">Гостиницы</a>
             </li>
           </ul>
         </header>
@@ -139,18 +142,20 @@
             <option value="cheap">Сначала дорогие</option>
             <option value="expensive">Сначала популярные</option>
           </select>
-          <a class="button-sort" href="#">
-            <div class="button-sort-cards"></div>
-            <span class="visually-hidden">Показать карточки</span>
-          </a>
-          <a class="button-sort" href="#">
-            <div class="button-sort-slide-show"></div>
-            <span class="visually-hidden">Показать слайдшоу</span>
-          </a>
-          <a class="button-sort" href="#">
-            <div class="button-sort-list"></div>
-            <span class="visually-hidden">Показать список</span>
-          </a>
+          <div class="button-sort-container">
+            <a class="button-sort" href="#">
+              <div class="button-sort-cards"></div>
+              <span class="visually-hidden">Показать карточки</span>
+            </a>
+            <a class="button-sort" href="#">
+              <div class="button-sort-slide-show"></div>
+              <span class="visually-hidden">Показать слайдшоу</span>
+            </a>
+            <a class="button-sort" href="#">
+              <div class="button-sort-list"></div>
+              <span class="visually-hidden">Показать список</span>
+            </a>
+          </div>
         </div>
         <ul class="hotel-list">
           <li class="hotel-card">
@@ -244,7 +249,7 @@
             </li>
           </ul>
           <form class="hotel-counter-form">
-            <label for="hotel-counter">Гостиниц на странице:</label>
+            <label class="hotel-counter-value" for="hotel-counter">Гостиниц на странице:</label>
             <select class="hotel-counter-field" name="hotel-counter"
               aria-label="Сортировка количества гостиниц на странице">
               <option value="4">4</option>
@@ -255,10 +260,12 @@
         </div>
         </section>
         <section class="subscribtion subscribtion-catalog">
-          <h2 class="subscribtion-title">Подпишитесь на рассылку</h2>
-          <p class="subscribtion-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
+          <h2 class="catalog-subscribtion-title">Подпишитесь на рассылку</h2>
+          <p class="catalog-subscribtion-description">Только полезная информация и никакого спама, честное бойскаутское!
+          </p>
           <form class="subscribtion-form" action="https://echo.htmlacademy.ru/" method="post">
-            <input type="email" id="subscribtion-email" name="subscribtion-email" placeholder="Ваш e-mail" required>
+            <input class="subscribtion-form-input" type="email" id="subscribtion-email" name="subscribtion-email"
+              placeholder="Ваш e-mail" required>
             <button class="button button-subscribtion" type="submit">Подписаться</button>
           </form>
       </div>

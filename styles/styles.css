@@ -91,8 +91,29 @@ li {
   text-decoration: none;
 }
 
+.button-header:hover,
+.button-header:focus,
+.hotel-card-button:hover,
+.hotel-card-button:focus {
+  background-color: #615048;
+}
+
+.button-header:active,
+.hotel-card-button:active {
+  background-color: #756157;
+}
+
+
 .button:active {
   color: rgba(255, 255, 255, 0.3);
+}
+
+.button:disabled {
+  background-color: #E5E5E5;
+}
+
+.navigation-item {
+  position: relative;
 }
 
 .navigation-link {
@@ -102,6 +123,18 @@ li {
   text-transform: capitalize;
   color: #000000;
   background-color: #ffffff;
+  min-width: 42px;
+  min-height: 65px;
+}
+
+.navigation-link-current::before {
+  position: absolute;
+  right: 17px;
+  left: 17px;
+  bottom: -20px;
+  height: 20px;
+  border-bottom: 2px solid #756257;
+  content: "";
 }
 
 .navigation {
@@ -138,12 +171,7 @@ li {
 
 .navigation-item .navigation-link {
   margin: 0;
-  padding: 20px 17px;
-}
-
-.navigation-link {
-  min-width: 42px;
-  min-height: 65px;
+  padding: 19px 17px;
 }
 
 .navigation-search {
@@ -443,6 +471,15 @@ li {
   text-decoration: none;
 }
 
+.button-hotel-search:hover,
+.button-hotel-search:focus {
+  background-color: #615048;
+}
+
+.button-hotel-search:active {
+  background-color: #756157;
+}
+
 .subscribtion {
   width: 1200px;
   margin: 0;
@@ -504,6 +541,21 @@ li {
   text-transform: uppercase;
 }
 
+.button-subscribtion:hover,
+.button-subscribtion:focus,
+.sort-button:hover,
+.sort-button:focus,
+.button-favorite:hover,
+.button-favorite:focus {
+  background-color: #68A2CA;
+}
+
+.button-subscribtion:active,
+.sort-button:active,
+.button-favorite:active {
+  background-color: #82B3D3;
+}
+
 .page-footer {
   display: flex;
   justify-content: flex-start;
@@ -536,7 +588,7 @@ li {
 }
 
 .footer-social-item svg:hover,
-.footer-social-item svg:focus {
+.footer-social-logo:focus svg {
   fill: #68A2CA;
 }
 
@@ -581,12 +633,12 @@ li {
   margin: 8px 0px 8px 37px;
 }
 
-.academy-logo:hover,
-.academy-logo:focus {
+.footer-academy-logo-link:hover .academy-logo,
+.footer-academy-logo-link:focus .academy-logo {
   fill: #756157;
 }
 
-.academy-logo:active {
+.footer-academy-logo-link:active .academy-logo {
   fill: rgba(117, 97, 87, 0.3);
 }
 
@@ -618,11 +670,19 @@ li {
 }
 
 .breadcrumbs-house {
-  width: 13px;
-  height: 13px;
-  background-size: 100% auto;
-  background-repeat: no-repeat;
-  background-image: url("../images/catalog-home.svg");
+  fill: #FFFFFF;
+}
+
+.breadcrumbs-house:hover {
+  fill: rgba(255, 255, 255, 0.6);
+}
+
+.breadcrumbs-house:focus {
+  fill: #FFFFFF;
+}
+
+.breadcrumbs-house:active {
+  fill: rgba(255, 255, 255, 0.3);
 }
 
 .breadcrumbs-arrow {
@@ -631,6 +691,18 @@ li {
   background-size: 100% auto;
   background-repeat: no-repeat;
   background-image: url("../images/arrow.svg");
+}
+
+.breadcrumbs-link-hotels:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.breadcrumbs-link-hotels:focus {
+  color: #FFFFFF;
+}
+
+.breadcrumbs-link-hotels:active {
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .breadcrumbs-link {
@@ -744,8 +816,22 @@ li {
   line-height: 20px;
   text-align: center;
   background: none;
-  border: none;
   padding-top: 20px;
+}
+
+.button-reset:hover {
+  color: #FFFFFF;
+  opacity: 0.6;
+}
+
+.button-reset:focus {
+  border: 3px solid #83B3D3;
+  border-radius: 4px;
+}
+
+.button-reset:active {
+  color: #FFFFFF;
+  opacity: 0.3;
 }
 
 .hotel-search-result {
@@ -771,7 +857,7 @@ li {
   display: flex;
   align-items: center;
   padding: 0;
-  margin: 55px 72px 56px;
+  margin: 55px 0px 56px 72px;
 }
 
 .sort-title {
@@ -802,7 +888,15 @@ li {
   margin: 0 78px 0 0;
 }
 
-.button-sort+.button-sort {
+/* .button-sort+.button-sort {
+  margin-left: 8px;
+} */
+
+.button-sort-container {
+  display: flex;
+}
+
+.button-sort:not(:first-child) {
   margin-left: 8px;
 }
 
@@ -985,7 +1079,11 @@ li {
   line-height: 36px;
 }
 
-.pagination>li+li {
+/* .pagination>li+li {
+  margin-left: 8px;
+} */
+
+.pagination-item:not(:first-child) {
   margin-left: 8px;
 }
 
@@ -1043,7 +1141,7 @@ li {
   padding: 14px 98px 14px 20px;
 }
 
-.hotel-counter-form label {
+.hotel-counter-value {
   padding: 0;
   margin: auto 51px auto 0;
 }
@@ -1052,14 +1150,16 @@ li {
   background: #FFFFFF;
 }
 
-.subscribtion-catalog input {
+.subscribtion-form-input {
   background: #F2F2F2;
 }
 
-.subscribtion-catalog h2 {
+.catalog-subscribtion-title {
   color: #000000;
 }
 
-.subscribtion-catalog p {
+.catalog-subscribtion-description {
+  width: 475px;
+  margin: 0 auto 46px;
   color: #333333;
 }
