@@ -509,26 +509,13 @@ li {
 
 .subscribtion-form {
   display: flex;
-  justify-content: center;
   padding: 0;
-}
-
-.subscribtion-form input {
-  width: 600px;
-  height: 60px;
-  padding: 0;
-  border: none;
-  border-radius: 10px 0px 0px 10px;
-}
-
-.subscribtion-form input::placeholder {
-  font-size: 18px;
-  line-height: 21px;
-  padding: 20px 22px 491px 19px;
+  margin-left: 200px;
 }
 
 .button-subscribtion {
   width: 200px;
+  height: 60px;
   padding: 0;
   margin: 0;
   font-weight: 700;
@@ -565,7 +552,7 @@ li {
 
 .footer-social {
   padding: 0;
-  margin: 5px 41px 5px 0px;
+  margin: 3px 41px 5px 0px;
 }
 
 .footer-social-list {
@@ -615,7 +602,7 @@ li {
   text-decoration: none;
   display: block;
   padding: 0;
-  margin: 5px 194px;
+  margin: 3px 199px 3px 195px;
 }
 
 .footer-contacts-phone:hover,
@@ -630,7 +617,7 @@ li {
 .footer-academy-logo-link {
   display: block;
   padding: 0;
-  margin: 8px 0px 8px 37px;
+  margin: 7px 0px 8px 38px;
 }
 
 .footer-academy-logo-link:hover .academy-logo,
@@ -725,6 +712,10 @@ li {
   margin-bottom: 30px;
 }
 
+.filter-title-price {
+  margin-bottom: 34px;
+}
+
 .catalog-filter-group {
   min-width: 150px;
   margin: 0 70px 0 0;
@@ -747,36 +738,22 @@ li {
   margin: 0;
 }
 
-.catalog-filter-item+.catalog-filter-item {
-  padding: 0;
-  margin-top: 15px;
+.catalog-filter-item:not(:last-child) {
+  margin-bottom: 15px;
 }
 
-.sort-price {
-  display: block;
-  padding: 0;
+.range-wrapper-inputs {
+  position: relative;
   margin: 0;
-  margin-bottom: 34px;
-}
-
-.sort-price-container {
   display: flex;
   flex-direction: row;
   flex-basis: 288px;
   min-height: 48px;
 }
 
-.sort-price-container input {
-  font-family: 'PT Sans';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 21px;
-  color: #FFFFFF;
-}
-
 .sort-price-input-min,
 .sort-price-input-max {
+  box-sizing: border-box;
   width: 144px;
   color: #FFFFFF;
   background: none;
@@ -787,9 +764,94 @@ li {
   border-radius: 4px 0 0 4px;
 }
 
+.range-wrapper-inputs::before {
+  position: absolute;
+  top: 12px;
+  left: 112px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  content: "от";
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.range-wrapper-inputs::after {
+  position: absolute;
+  top: 12px;
+  right: 17px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  content: "до";
+  color: rgba(255, 255, 255, 0.3);
+}
+
 .sort-price-input-max {
   border-radius: 0 4px 4px 0;
-  border-left: none;
+  margin-left: -2px;
+}
+
+.range {
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+.range-scale {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 76px;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+}
+
+.range-bar {
+  position: absolute;
+  left: 0;
+  right: 60px;
+  top: 0;
+  bottom: 0;
+  padding: 0;
+  margin-top: -2px;
+  margin-left: -2px;
+  border: 2px solid #FFFFFF;
+}
+
+.range-toogle {
+  position: absolute;
+  border: none;
+  width: 20px;
+  height: 20px;
+  background: #FFFFFF;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.toogle-min {
+  top: -10px;
+  left: -3px;
+}
+
+.toogle-max {
+  top: -10px;
+  right: -12px;
+}
+
+.range-input {
+  padding-left: 19px;
+  padding-right: 35px;
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #FFFFFF;
+}
+
+.range-input::-webkit-outer-spin-button,
+.range-input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
 }
 
 .sort-button-container {
@@ -840,8 +902,56 @@ li {
 }
 
 .control {
+  position: relative;
+  display: block;
   font-size: 18px;
   line-height: 21px;
+  padding-left: 20px;
+}
+
+.control-mark {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: -2;
+  left: 0;
+  background: #FFFFFF;
+  border-radius: 4px;
+}
+
+.control-lable {
+  margin-left: 19px;
+}
+
+.control-input[type="checkbox"]:checked+.control-mark::before {
+  position: absolute;
+  top: 5px;
+  left: 4px;
+  width: 13px;
+  height: 10px;
+  background: url("../images/check-mark.svg");
+  content: "";
+}
+
+.control-mark-radio {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: -2;
+  left: 0;
+  background: #FFFFFF;
+  border-radius: 50%;
+}
+
+.control-input[type="radio"]:checked+.control-mark-radio::before {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #3F5E72;
+  content: "";
 }
 
 .sort-price-input {
@@ -873,24 +983,25 @@ li {
 .select-control {
   box-sizing: border-box;
   width: 290px;
+  height: 49px;
   font-size: 18px;
   line-height: 21px;
   font-family: 'PT Sans';
   font-style: normal;
   font-weight: 400;
   color: #333333;
-  padding-top: 14px;
-  padding-bottom: 14px;
-  padding-left: 20px;
+  padding-top: 9px;
+  padding-bottom: 12px;
+  padding-left: 18px;
   padding-right: 97px;
   border: 2px solid #E5E5E5;
   border-radius: 4px;
   margin: 0 78px 0 0;
+  background-image: url("../images/select-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: right 18px center;
+  appearance: none;
 }
-
-/* .button-sort+.button-sort {
-  margin-left: 8px;
-} */
 
 .button-sort-container {
   display: flex;
@@ -919,31 +1030,24 @@ li {
   margin: 0;
 }
 
-.button-sort-cards {
+.button-sorts {
   width: 16px;
   height: 14px;
   background-repeat: no-repeat;
-  background-image: url("../images/icon-table.svg");
-  margin: 17px 16px;
+  margin: 15px 14px;
   padding: 0;
+}
+
+.button-sort-cards {
+  background-image: url("../images/icon-table.svg");
 }
 
 .button-sort-slide-show {
-  width: 16px;
-  height: 14px;
-  background-repeat: no-repeat;
   background-image: url("../images/icon-slideshow.svg");
-  margin: 17px 16px;
-  padding: 0;
 }
 
 .button-sort-list {
-  width: 16px;
-  height: 14px;
-  background-repeat: no-repeat;
   background-image: url("../images/icon-list.svg");
-  margin: 17px 16px;
-  padding: 0;
 }
 
 .hotel-list {
@@ -952,7 +1056,7 @@ li {
   column-gap: 18px;
   padding: 0;
   padding-bottom: 66px;
-  margin: 56px 71px 0 73px;
+  margin: 0 71px 0 73px;
   border-bottom: 1px solid #E6E6E6;
 }
 
@@ -1057,7 +1161,7 @@ li {
 .pagination-container {
   display: flex;
   padding: 0;
-  margin: 30px 71px 25px 73px;
+  margin: 28px 71px 25px 73px;
 }
 
 
@@ -1133,17 +1237,29 @@ li {
   color: #333333;
 }
 
-.hotel-counter-form select {
+.hotel-counter-label {
+  padding: 0;
+  margin: auto 51px auto 0;
+}
+
+.hotel-counter-field {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  width: 160px;
+  height: 49px;
+  color: #333333;
   box-sizing: border-box;
   border: 2px solid #E5E5E5;
   border-radius: 4px;
   width: 160px;
-  padding: 14px 98px 14px 20px;
-}
-
-.hotel-counter-value {
-  padding: 0;
-  margin: auto 51px auto 0;
+  padding: 12px 98px 14px 18px;
+  appearance: none;
+  background-image: url("../images/select-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: right 18px center;
 }
 
 .subscribtion-catalog {
@@ -1151,10 +1267,33 @@ li {
 }
 
 .subscribtion-form-input {
+  width: 560px;
+  height: 60px;
+  border: none;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 10px 0px 0px 10px;
   background: #F2F2F2;
 }
 
+.subscribtion-form input::placeholder {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+  opacity: 0.6;
+}
+
 .catalog-subscribtion-title {
+  margin: 0;
+  margin-bottom: 29px;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
   color: #000000;
 }
 
