@@ -197,6 +197,61 @@
         </a>
       </section>
     </footer>
+    <div class="modal-container modal-container-close">
+      <div class="modal modal-search">
+        <button class="modal-close-button" type="button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+        <form class="modal-content" action="https://echo.htmlacademy.ru/" method="post">
+          <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+          <div class="modal-container-field">
+            <label for="input-checkin" class="modal-checkin-date">Дата заезда:</label>
+            <input type="text" class="input-arrival" id="input-checkin" value="27 апреля 2020"
+              placeholder="Выберите дату заезда">
+            <button class="button-arrival">
+              <span class="visually-hidden">Календарь</span>
+            </button>
+            <p class="modal-text error-text">Мы не можем отправить вас в прошлое.</p>
+          </div>
+          <div class="modal-container-field arrival-field">
+            <label for="input-checkout" class="modal-checkout-date">Дата выезда:</label>
+            <input type="text" class="input-arrival" id="input-checkout" value="1 сентября 2021"
+              placeholder="Выберите дату выезда">
+            <button class="button-arrival">
+              <span class="visually-hidden">Календарь</span>
+            </button>
+            <p class="modal-text promt-text">На эти даты есть свободные номера. Пока есть.</p>
+          </div>
+          <div class="modal-container-field">
+            <lable class="counter-lable" for="counter-input">Взрослые:</lable>
+            <span class="people-counter">
+              <button class="button-counter button-down">
+                <span class="visually-hidden">Минус</span>
+              </button>
+              <input type="text" class="people-counter-input" id="counter-input" value="2">
+              <button class="button-counter button-up">
+                <span class="visually-hidden">Плюс</span>
+              </button>
+            </span>
+            <lable class="counter-lable-children" for="counter-input">Дети:</lable>
+            <span class="information"></span>
+            <span class="information-container">Укажите количество детей, которые будут с вами, возраст которых от 6
+              до
+              18 лет. Дети<br> до 6 лет размещаются бесплатно.</span>
+            <span class="children-counter">
+              <button class="button-counter button-down">
+                <span class="visually-hidden">Минус</span>
+              </button>
+              <input type="text" class="people-counter-input" id="counter-input" value="1">
+              <button class="button-counter button-up">
+                <span class="visually-hidden">Плюс</span>
+              </button>
+            </span>
+          </div>
+          <button class="button-modal-search">Найти</button>
+        </form>
+      </div>
+    </div>
   </div>
 </body>
 
