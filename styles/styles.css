@@ -46,10 +46,6 @@ body {
   flex-grow: 1;
 }
 
-li {
-  list-style-type: none;
-}
-
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -159,6 +155,7 @@ li {
 }
 
 .navigation-list {
+  list-style-type: none;
   width: 450px;
   padding: 0;
   margin: 0;
@@ -276,6 +273,7 @@ li {
 
 .advantages-list {
   display: flex;
+  list-style-type: none;
   flex-wrap: wrap;
   text-align: center;
   margin: 0;
@@ -284,6 +282,7 @@ li {
 
 .advantages-list-inserted {
   display: flex;
+  list-style-type: none;
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
@@ -587,6 +586,7 @@ li {
 
 .footer-social-list {
   display: flex;
+  list-style-type: none;
   padding: 0;
   margin: 0;
 }
@@ -679,6 +679,7 @@ li {
 
 .breadcrumbs {
   display: flex;
+  list-style-type: none;
   justify-content: flex-start;
   align-items: center;
   gap: 10px;
@@ -764,6 +765,7 @@ li {
 }
 
 .catalog-filter-list {
+  list-style-type: none;
   padding: 0;
   margin: 0;
 }
@@ -1152,6 +1154,7 @@ li {
 .hotel-list {
   display: -ms-grid;
   display: grid;
+  list-style-type: none;
   -ms-grid-columns: 340px 18px 340px 18px 340px;
   grid-template-columns: repeat(3, 340px);
   -webkit-column-gap: 18px;
@@ -1297,6 +1300,7 @@ li {
 .pagination {
   padding: 0;
   margin: 0;
+  list-style-type: none;
   display: flex;
   flex-basis: 500px;
   flex-wrap: wrap;
@@ -1501,6 +1505,8 @@ li {
 
 .modal-container {
   position: fixed;
+  font-family: 'PT Sans', sans-serif;
+  font-style: normal;
   z-index: 2;
   top: 0;
   left: 0;
@@ -1564,8 +1570,6 @@ li {
 
 .modal-title {
   margin: 0;
-  font-family: 'PT Sans';
-  font-style: normal;
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
@@ -1586,8 +1590,6 @@ li {
 .modal-checkout-date,
 .counter-lable,
 .counter-lable-children {
-  font-family: 'PT Sans';
-  font-style: normal;
   font-weight: 700;
   font-size: 20px;
   line-height: 26px;
@@ -1626,8 +1628,7 @@ li {
 
 .input-arrival,
 .people-counter-input {
-  font-family: 'PT Sans';
-  font-style: normal;
+  font-family: inherit;
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
@@ -1636,8 +1637,6 @@ li {
 
 .input-arrival::-webkit-input-placeholder,
 .people-counter-input::-webkit-input-placeholder {
-  font-family: 'PT Sans';
-  font-style: normal;
   font-weight: 700;
   font-size: 18px;
   line-height: 40px;
@@ -1647,8 +1646,6 @@ li {
 
 .input-arrival::-moz-placeholder,
 .people-counter-input::-moz-placeholder {
-  font-family: 'PT Sans';
-  font-style: normal;
   font-weight: 700;
   font-size: 18px;
   line-height: 40px;
@@ -1658,8 +1655,6 @@ li {
 
 .input-arrival:-ms-input-placeholder,
 .people-counter-input:-ms-input-placeholder {
-  font-family: 'PT Sans';
-  font-style: normal;
   font-weight: 700;
   font-size: 18px;
   line-height: 40px;
@@ -1669,8 +1664,6 @@ li {
 
 .input-arrival::-ms-input-placeholder,
 .people-counter-input::-ms-input-placeholder {
-  font-family: 'PT Sans';
-  font-style: normal;
   font-weight: 700;
   font-size: 18px;
   line-height: 40px;
@@ -1680,8 +1673,6 @@ li {
 
 .input-arrival::placeholder,
 .people-counter-input::placeholder {
-  font-family: 'PT Sans';
-  font-style: normal;
   font-weight: 700;
   font-size: 18px;
   line-height: 40px;
@@ -1709,8 +1700,6 @@ li {
 
 .modal-text {
   position: absolute;
-  font-family: 'PT Sans';
-  font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 21px;
