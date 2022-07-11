@@ -887,7 +887,7 @@ body {
   outline: none;
   padding-left: 19px;
   padding-right: 40px;
-  font-family: 'PT Sans';
+  font-family: 'PT Sans', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -1071,7 +1071,7 @@ body {
   height: 49px;
   font-size: 18px;
   line-height: 21px;
-  font-family: 'PT Sans';
+  font-family: 'PT Sans', sans-serif;
   font-style: normal;
   font-weight: 400;
   color: #333333;
@@ -1378,7 +1378,7 @@ body {
 }
 
 .hotel-counter-field {
-  font-family: 'PT Sans';
+  font-family: 'PT Sans', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -1427,7 +1427,7 @@ body {
 }
 
 .subscribtion-form input::-webkit-input-placeholder {
-  font-family: 'PT Sans';
+  font-family: 'PT Sans', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -1439,7 +1439,7 @@ body {
 }
 
 .subscribtion-form input::-moz-placeholder {
-  font-family: 'PT Sans';
+  font-family: 'PT Sans', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -1451,7 +1451,7 @@ body {
 }
 
 .subscribtion-form input:-ms-input-placeholder {
-  font-family: 'PT Sans';
+  font-family: 'PT Sans', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -1463,7 +1463,7 @@ body {
 }
 
 .subscribtion-form input::-ms-input-placeholder {
-  font-family: 'PT Sans';
+  font-family: 'PT Sans', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -1475,7 +1475,7 @@ body {
 }
 
 .subscribtion-form input::placeholder {
-  font-family: 'PT Sans';
+  font-family: 'PT Sans', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -1813,7 +1813,7 @@ body {
   box-sizing: border-box;
   width: 256px;
   padding: 15px 18px 23px 22px;
-  font-family: 'PT Sans';
+  font-family: 'PT Sans', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -1851,7 +1851,7 @@ body {
   border: 3px solid #83B3D3;
   padding: 9px 255px;
   margin: 0;
-  font-family: 'PT Sans';
+  font-family: 'PT Sans', sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
