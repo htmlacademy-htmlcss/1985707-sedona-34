@@ -497,6 +497,11 @@ li {
   background-color: #756157;
 }
 
+.button-hotel-search:disabled {
+  color: #FFFFFF;
+  background-color: #E5E5E5;
+}
+
 .subscribtion {
   width: 1200px;
   margin: 0;
@@ -560,6 +565,13 @@ li {
   background-color: #82B3D3;
 }
 
+.button-subscribtion:disabled,
+.sort-button:disabled,
+.button-favorite:disabled {
+  background-color: #E5E5E5;
+  cursor: default;
+}
+
 .page-footer {
   display: flex;
   justify-content: flex-start;
@@ -592,7 +604,7 @@ li {
 }
 
 .footer-social-item svg:hover,
-.footer-social-logo:focus svg {
+.footer-social-item svg:focus {
   fill: #68A2CA;
 }
 
@@ -836,9 +848,8 @@ li {
 
 .range-toogle {
   position: absolute;
-  border: none;
-  width: 20px;
-  height: 20px;
+  padding: 10px;
+  border: 3px solid transparent;
   background: #FFFFFF;
   border-radius: 5px;
   cursor: pointer;
@@ -870,7 +881,7 @@ li {
 
 .range-input {
   padding-left: 19px;
-  padding-right: 35px;
+  padding-right: 40px;
   font-family: 'PT Sans';
   font-style: normal;
   font-weight: 400;
@@ -880,6 +891,8 @@ li {
 }
 
 .range-input:hover {
+  position: relative;
+  z-index: 2;
   border-color: rgba(255, 255, 255, 0.6);
 }
 
@@ -1215,6 +1228,25 @@ li {
   line-height: 20px;
   text-transform: uppercase;
   border: none;
+}
+
+.button-in-favorite {
+  background-color: #7DB54F;
+}
+
+.button-in-favorite:hover,
+.button-in-favorite:focus {
+  background-color: #6C9E42;
+}
+
+.button-in-favorite:active {
+  background-color: #7DB54F;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.button-in-favorite:disabled {
+  background-color: #E5E5E5;
+  cursor: default;
 }
 
 .hotel-card-stars {
