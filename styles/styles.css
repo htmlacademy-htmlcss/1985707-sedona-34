@@ -220,7 +220,7 @@ body {
   position: relative;
   padding-top: 52px;
   margin: 0;
-  background-color: #000000;
+  background-color: silver;
   background-image: url("../images/sedona-welcom.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
@@ -392,14 +392,16 @@ body {
 .advantages-item-city {
   width: 800px;
   background-image: url("../images/sedona-city.jpg");
-  background-size: 100% 100%;
+  background-size: contain;
+  background-position: center;
   background-repeat: no-repeat;
 }
 
 .advantages-item-bridge {
   width: 800px;
   background-image: url("../images/sedona-canyon.jpg");
-  background-size: 100% 100%;
+  background-size: contain;
+  background-position: center;
   background-repeat: no-repeat;
 }
 
@@ -549,7 +551,7 @@ body {
   width: 1200px;
   margin: 0;
   padding: 94px 0;
-  background-color: #000000;
+  background-color: #68A2CA;
   background-image: url("../images/sedona-subscribtion.jpg");
   background-size: 100% 100%;
   background-repeat: no-repeat;
@@ -712,7 +714,7 @@ body {
   color: #ffffff;
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  background-color: #000000;
+  background-color: #68A2CA;
   background-image: url("../images/catalog-background.jpg");
 }
 
