@@ -296,15 +296,12 @@ body {
   width: 400px;
 }
 
-.advantages-list-inserted li>h3 {
+.advantages-item-house h3,
+.advantages-item-food h3,
+.advantages-item-souvenir h3 {
   padding: 0;
   margin: 103px 85px 30px;
 }
-
-/* .advantages-list-inserted li>p {
-  padding: 0;
-  margin: 0 85px;
-} */
 
 .advantages-item {
   padding: 0;
