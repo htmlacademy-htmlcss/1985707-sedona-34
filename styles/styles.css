@@ -122,7 +122,7 @@ body {
 .navigation-item {
   position: relative;
   margin: 0 17px;
-  padding: 20px 0;
+  padding: 19px 0;
 }
 
 .navigation-link {
@@ -292,7 +292,19 @@ body {
 
 .advantages-list-inserted li {
   padding-top: 80px;
+  padding-bottom: 80px;
+  width: 400px;
 }
+
+.advantages-list-inserted li>h3 {
+  padding: 0;
+  margin: 103px 85px 30px;
+}
+
+/* .advantages-list-inserted li>p {
+  padding: 0;
+  margin: 0 85px;
+} */
 
 .advantages-item {
   padding: 0;
@@ -401,6 +413,36 @@ body {
   height: 72px;
   background-image: url("../images/house.svg");
   background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+
+.advantages-item-house {
+  background-image: url("../images/house.svg");
+  background-position: top 80px center;
+  background-repeat: no-repeat;
+}
+
+.advantages-item-house .advantages-description {
+  margin: 0 110px;
+}
+
+.advantages-item-food .advantages-description {
+  margin: 0 85px;
+}
+
+.advantages-item-souvenir .advantages-description {
+  margin: 0 85px;
+}
+
+.advantages-item-food {
+  background-image: url("../images/food.svg");
+  background-position: top 80px center;
+  background-repeat: no-repeat;
+}
+
+.advantages-item-souvenir {
+  background-image: url("../images/souvenir.svg");
+  background-position: top 80px center;
   background-repeat: no-repeat;
 }
 
@@ -530,7 +572,7 @@ body {
 
 .subscribtion-description {
   width: 475px;
-  margin: 0 auto 46px;
+  margin: 0 auto 47px;
 }
 
 .subscribtion-form {
@@ -580,7 +622,7 @@ body {
   display: flex;
   justify-content: flex-start;
   padding: 0;
-  margin: 40px 70px 30px;
+  margin: 42px 0px 30px 70px;
 }
 
 .footer-social {
@@ -916,6 +958,10 @@ body {
   background: #756257;
 }
 
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
 .range-input::-webkit-outer-spin-button,
 .range-input::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -947,7 +993,8 @@ body {
   line-height: 20px;
   text-align: center;
   background: none;
-  padding-top: 20px;
+  padding-top: 16px;
+  padding-bottom: 5px;
   border: 3px solid transparent;
 }
 
